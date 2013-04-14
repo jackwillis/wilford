@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Wilford.js</title>
+
+  <link rel="stylesheet" href="wilford.css">
+  <script src="jquery-1.9.1.js"></script>
+  <script src="wilford.js"></script>
+
+  <script>
+
+    var sounds = {
+         q:    ["beep"          ,"sounds/beep.ogg"
+      ], w:    ["boop"          ,"sounds/boop.ogg"
+      ], e:    ["synth noise"   ,"sounds/synth.ogg"
+      ], r:    ["noise burst"   ,"sounds/burst.ogg"
+      ], t:    ["space noise"   ,"sounds/space.ogg"
+    ]};
+
+    $(function(){ new Wilford($("#soundboard"), sounds); });
+
+  </script>
+
+ </head>
+ <body>
+
+  <h1>Wilford.js demo</h1>
+
+  <div id="soundboard">
+    Javascript is required to run Wilford.js.
+  </div>
+
+ </body>
+</html>

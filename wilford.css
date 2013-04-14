@@ -1,0 +1,58 @@
+.-wf-soundboard
+{
+  text-align: center;
+}
+
+.-wf-soundboard:after
+{ 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.-wf-button
+{
+  background: #888;
+  border: .25em solid #666;
+  font-size: .75em;
+  width: 6em;
+  height: 6em;
+  line-height: .75em;
+  margin: .25em;
+  float: left;
+}
+
+.-wf-depressed
+{
+  background: #777;
+}
+
+.-wf-letter
+{
+  font-size: 2em;
+  font-weight: bold;
+  margin: .5em;
+}
+
+.-wf-empty
+{
+  background: #bbb;
+  border-color: #999;
+}
+
+.-wf-row
+{
+  clear: left;
+}
+
+.-wf-soundboard .-wf-row:nth-child(2)
+{
+  margin-left: 2.625em;
+}
+
+.-wf-soundboard .-wf-row:nth-child(3)
+{
+  margin-left: 5.25em;
+}
