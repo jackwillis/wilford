@@ -1,6 +1,6 @@
 # Wilford.js
 
-javascript/&gt;audio&lt; soundboard.
+javascript/&lt;audio&gt; soundboard.
 
 demo: [http://jackwillis.github.io/wilford/](http://jackwillis.github.io/wilford/)
 
