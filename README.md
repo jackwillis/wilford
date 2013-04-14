@@ -7,7 +7,7 @@ demo: [http://jackwillis.github.io/wilford/](http://jackwillis.github.io/wilford
 usage:
 
     $(function(){
-      new Wilford($("#soundboard"), soundsObject);
+      new Wilford(element, soundsObject);
     });
 
 for full usage, see index.html.
