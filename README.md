@@ -1,10 +1,18 @@
 # Wilford.js
 
-javascript/<audio> soundboard.
+javascript/&gt;audio&lt; soundboard.
 
-for usage, see index.html.
+demo: [http://jackwillis.github.io/wilford/](http://jackwillis.github.io/wilford/)
 
-## browser support
+usage:
+
+    $(function(){
+      new Wilford($("#soundboard"), soundsObject);
+    });
+
+for full usage, see index.html.
+
+## note: browser support for audio files
 
 **Firefox 3.6+**: ogg, wav  
 **Safari 5+**: mp3, wav  
