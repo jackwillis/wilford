@@ -11,6 +11,7 @@ var Wilford = (function ()
     this.sounds = sounds;
     this.audioObjects = {};
     this.buttons = {};
+    this.space = null;
     this.makeSoundboard();
 
     return this;
@@ -55,6 +56,13 @@ var Wilford = (function ()
     return row;
   };
 
+  prototype.addSpace = function()
+  {
+    this.space = $("<div class='-wf-row -wf-space -wf-button'>");
+    this.space.html("stop all sounds");
+    this.space.appendTo(this.el);
+  };
+
   prototype.setupSounds = function()
   {
     for (letter in this.sounds)
@@ -72,12 +80,27 @@ var Wilford = (function ()
   {
     var audioObjects = this.audioObjects;
     var buttons = this.buttons;
+    var space = this.space;
+    
     $(document).keypress(function(e)
     {
       var charCode = e.which;
       if (charCode)
       {
         var letter = String.fromCharCode(charCode).toLowerCase();
+
+        if (letter === " ")
+         {
+          for (key in audioObjects)
+           {
+            var audio = audioObjects[key];
+            sound.pause();
+            sound.currentTime = 0;
+           }
+          space.addClass("-wf-depressed");
+          setTimeout(function(){ space.removeClass("-wf-depressed"); }, 100);
+          return;
+         }
 
         var button = buttons[letter];
         var audio = audioObjects[letter];
@@ -99,9 +122,11 @@ var Wilford = (function ()
     this.el.addClass("-wf-soundboard");
     this.el.html("");
 
-    this.addRow("qwertyuiop");
-    this.addRow("asdfghjkl");
-    this.addRow("zxcvbnm");
+    this.addRow("`1234567890-=");
+    this.addRow("qwertyuiop[]\\");
+    this.addRow("asdfghjkl;'");
+    this.addRow("zxcvbnm,./");
+    this.addSpace();
 
     this.bindKeys();
 
